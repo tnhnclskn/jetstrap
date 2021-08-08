@@ -82,7 +82,7 @@ class InstallCommand extends Command
 
         Helpers::updateNodePackages(function ($packages) {
             return [
-                'alpinejs' => '^3.0.6',
+                'alpinejs' => '^3.2.6',
                 'bootstrap' => '^4.6.0',
                 'jquery' => '^3.5.1',
                 'popper.js' => '^1.16.1'
