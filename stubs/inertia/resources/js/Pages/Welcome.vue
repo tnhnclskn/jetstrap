@@ -1,21 +1,23 @@
 <template>
+  <Head title="Welcome" />
+
   <div>
     <div class="container-fluid fixed-top p-4">
       <div class="col-12">
         <div v-if="canLogin" class="d-flex justify-content-end">
           <div>
-            <inertia-link v-if="$page.props.user" href="/dashboard" class="text-muted">
+            <Link v-if="$page.props.user" href="route('dashboard')" class="text-muted">
               Dashboard
-            </inertia-link>
+            </Link>
 
             <template v-else>
-              <inertia-link :href="route('login')" class="text-muted">
+              <Link :href="route('login')" class="text-muted">
                 Log in
-              </inertia-link>
+              </Link>
 
-              <inertia-link v-if="canRegister" :href="route('register')" class="ml-4 text-muted">
+              <Link v-if="canRegister" :href="route('register')" class="ml-4 text-muted">
                 Register
-              </inertia-link>
+              </Link>
             </template>
           </div>
         </div>
@@ -140,7 +142,14 @@
 </style>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
+
 export default {
+  components: {
+    Head,
+    Link,
+  },
+
   props: {
     canLogin: Boolean,
     canRegister: Boolean,

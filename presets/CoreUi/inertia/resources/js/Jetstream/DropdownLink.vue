@@ -3,13 +3,18 @@
     <slot></slot>
   </button>
 
-  <inertia-link style="min-width: 0" :href="href" class="dropdown-item" v-else>
+  <Link style="min-width: 0" :href="href" class="dropdown-item" v-else>
     <slot></slot>
-  </inertia-link>
+  </Link>
 </template>
 
 <script>
+import { Link } from '@inertiajs/inertia-vue3';
+
 export default {
+  components: {
+    Link,
+  },
   emits: ['clicked'],
   props: ['href', 'as']
 }

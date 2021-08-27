@@ -3,24 +3,12 @@
 @php
 $id = $id ?? md5($attributes->wire('model'));
 
-switch ($maxWidth ?? '') {
-    case 'sm':
-        $maxWidth = ' modal-sm';
-        break;
-    case 'md':
-        $maxWidth = '';
-        break;
-    case 'lg':
-        $maxWidth = ' modal-lg';
-        break;
-    case 'xl':
-        $maxWidth = ' modal-xl';
-        break;
-    case '2xl':
-    default:
-        $maxWidth = '';
-        break;
-}
+$maxWidth = [
+    'sm' => ' modal-sm',
+    'md' => '',
+    'lg' => ' modal-lg',
+    'xl' => ' modal-xl',
+][$maxWidth ?? 'md'];
 @endphp
 
 <!-- Modal -->

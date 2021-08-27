@@ -1,13 +1,15 @@
 <template>
   <div>
+    <Head :title="title" />
+
     <jet-banner />
 
     <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom sticky-top">
       <div class="container">
         <!-- Logo -->
-        <inertia-link class="navbar-brand mr-4" :href="route('dashboard')">
+        <Link class="navbar-brand mr-4" :href="route('dashboard')">
           <jet-application-mark width="36" />
-        </inertia-link>
+        </Link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -129,21 +131,28 @@
 </template>
 
 <script>
-import JetApplicationLogo from '@/Jetstream/ApplicationLogo'
-import JetBanner from '@/Jetstream/Banner'
-import JetApplicationMark from '@/Jetstream/ApplicationMark'
-import JetDropdown from '@/Jetstream/Dropdown'
-import JetDropdownLink from '@/Jetstream/DropdownLink'
-import JetNavLink from '@/Jetstream/NavLink'
+import JetApplicationLogo from '@/Jetstream/ApplicationLogo.vue'
+import JetBanner from '@/Jetstream/Banner.vue'
+import JetApplicationMark from '@/Jetstream/ApplicationMark.vue'
+import JetDropdown from '@/Jetstream/Dropdown.vue'
+import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
+import JetNavLink from '@/Jetstream/NavLink.vue'
+import { Head, Link } from '@inertiajs/inertia-vue3'
 
 export default {
+  props: {
+    title: String,
+  },
+
   components: {
+    Head,
     JetApplicationLogo,
     JetBanner,
     JetApplicationMark,
     JetDropdown,
     JetDropdownLink,
     JetNavLink,
+    Link,
   },
 
   data() {

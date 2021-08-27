@@ -1,5 +1,5 @@
 <template>
-  <app-layout>
+  <app-layout title="Team Settings">
     <template #header>
       <h2 class="h4 font-weight-bold">
         Team Settings
@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import TeamMemberManager from './TeamMemberManager'
-import AppLayout from '@/Layouts/AppLayout'
-import DeleteTeamForm from './DeleteTeamForm'
-import JetSectionBorder from '@/Jetstream/SectionBorder'
-import UpdateTeamNameForm from './UpdateTeamNameForm'
+import AppLayout from '@/Layouts/AppLayout.vue'
+import DeleteTeamForm from '@/Pages/Teams/Partials/DeleteTeamForm.vue'
+import JetSectionBorder from '@/Jetstream/SectionBorder.vue'
+import TeamMemberManager from '@/Pages/Teams/Partials/TeamMemberManager.vue'
+import UpdateTeamNameForm from '@/Pages/Teams/Partials/UpdateTeamNameForm.vue'
 
 export default {
   props: [

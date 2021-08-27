@@ -1,26 +1,30 @@
 <template>
-    <div class="row justify-content-center pt-4">
-        <div class="col-6">
-            <div>
-                <jet-authentication-card-logo />
-            </div>
+  <Head title="Terms of Service" />
 
-            <div class="card shadow-sm">
-                <div v-html="terms" class="card-body">
-                </div>
-            </div>
+  <div class="row justify-content-center pt-4">
+    <div class="col-6">
+      <div>
+        <jet-authentication-card-logo />
+      </div>
+
+      <div class="card shadow-sm">
+        <div v-html="terms" class="card-body">
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-import JetAuthenticationCardLogo from '@/Jetstream/AuthenticationCardLogo'
+import { Head } from '@inertiajs/inertia-vue3'
+import JetAuthenticationCardLogo from '@/Jetstream/AuthenticationCardLogo.vue'
 
 export default {
-    props: ['terms'],
+  props: ['terms'],
 
-    components: {
-        JetAuthenticationCardLogo,
-    },
+  components: {
+    Head,
+    JetAuthenticationCardLogo,
+  },
 }
 </script>

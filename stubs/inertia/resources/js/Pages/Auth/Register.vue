@@ -1,4 +1,6 @@
 <template>
+  <Head title="Register" />
+
   <jet-authentication-card>
     <template #logo>
       <jet-authentication-card-logo />
@@ -41,9 +43,9 @@
 
         <div class="mb-0">
           <div class="d-flex justify-content-end align-items-baseline">
-            <inertia-link :href="route('login')" class="text-muted mr-3 text-decoration-none">
+            <Link :href="route('login')" class="text-muted mr-3 text-decoration-none">
               Already registered?
-            </inertia-link>
+            </Link>
 
             <jet-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
               Register
@@ -56,23 +58,26 @@
 </template>
 
 <script>
-import JetAuthenticationCard from '@/Jetstream/AuthenticationCard'
-import JetAuthenticationCardLogo from '@/Jetstream/AuthenticationCardLogo'
-import JetButton from '@/Jetstream/Button'
-import JetInput from '@/Jetstream/Input'
-import JetCheckbox from "@/Jetstream/Checkbox";
-import JetLabel from '@/Jetstream/Label'
-import JetValidationErrors from '@/Jetstream/ValidationErrors'
+import JetAuthenticationCard from '@/Jetstream/AuthenticationCard.vue'
+import JetAuthenticationCardLogo from '@/Jetstream/AuthenticationCardLogo.vue'
+import JetButton from '@/Jetstream/Button.vue'
+import JetInput from '@/Jetstream/Input.vue'
+import JetCheckbox from "@/Jetstream/Checkbox.vue";
+import JetLabel from '@/Jetstream/Label.vue'
+import JetValidationErrors from '@/Jetstream/ValidationErrors.vue'
+import { Head, Link } from '@inertiajs/inertia-vue3'
 
 export default {
   components: {
+    Head,
     JetAuthenticationCard,
     JetAuthenticationCardLogo,
     JetButton,
     JetInput,
     JetCheckbox,
     JetLabel,
-    JetValidationErrors
+    JetValidationErrors,
+    Link,
   },
 
   data() {

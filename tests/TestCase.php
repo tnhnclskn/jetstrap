@@ -230,14 +230,14 @@ class TestCase extends \Orchestra\Testbench\TestCase
         $this->assertTrue($this->filesystem->exists(resource_path('js/Jetstream/Welcome.vue')));
         $this->assertTrue($this->filesystem->exists(resource_path('js/Layouts/AppLayout.vue')));
         $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Dashboard.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/API/ApiTokenManager.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/API/Partials/ApiTokenManager.vue')));
         $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/API/Index.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/DeleteUserForm.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/Partials/DeleteUserForm.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue')));
         $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/Show.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/TwoFactorAuthenticationForm.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/UpdatePasswordForm.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/UpdateProfileInformationForm.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/Partials/UpdatePasswordForm.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Profile/Partials/UpdateProfileInformationForm.vue')));
     }
 
     /**
@@ -248,11 +248,11 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function inertiaTeamTests()
     {
         $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/Create.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/CreateTeamForm.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/DeleteTeamForm.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/Partials/CreateTeamForm.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/Partials/DeleteTeamForm.vue')));
         $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/Show.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/TeamMemberManager.vue')));
-        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/UpdateTeamNameForm.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/Partials/TeamMemberManager.vue')));
+        $this->assertTrue($this->filesystem->exists(resource_path('js/Pages/Teams/Partials/UpdateTeamNameForm.vue')));
     }
 
     /**

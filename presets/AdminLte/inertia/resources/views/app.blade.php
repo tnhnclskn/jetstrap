@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Google Font: Source Sans Pro -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -21,5 +21,9 @@
     </head>
     <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed bg-light font-sans antialiased">
         @inertia
+
+        @env ('local')
+            <script src="http://localhost:3000/browser-sync/browser-sync-client.js"></script>
+        @endenv
     </body>
 </html>

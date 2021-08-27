@@ -176,12 +176,12 @@
 </template>
 
 <script>
-import JetApplicationLogo from '@/Jetstream/ApplicationLogo'
-import JetBanner from '@/Jetstream/Banner'
-import JetApplicationMark from '@/Jetstream/ApplicationMark'
-import JetDropdown from '@/Jetstream/Dropdown'
-import JetDropdownLink from '@/Jetstream/DropdownLink'
-import JetNavLink from '@/Jetstream/NavLink'
+import JetApplicationLogo from '@/Jetstream/ApplicationLogo.vue'
+import JetBanner from '@/Jetstream/Banner.vue'
+import JetApplicationMark from '@/Jetstream/ApplicationMark.vue'
+import JetDropdown from '@/Jetstream/Dropdown.vue'
+import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
+import JetNavLink from '@/Jetstream/NavLink.vue'
 
 export default {
   components: {

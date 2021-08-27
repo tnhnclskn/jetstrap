@@ -153,9 +153,9 @@ class InstallCommand extends Command
         // Install NPM packages...
         Helpers::updateNodePackages(function ($packages) {
             return [
-                '@inertiajs/inertia' => '^0.9.1',
-                '@inertiajs/inertia-vue3' => '^0.4.2',
-                '@inertiajs/progress' => '^0.2.5',
+                '@inertiajs/inertia' => '^0.10.0',
+                '@inertiajs/inertia-vue3' => '^0.5.1',
+                '@inertiajs/progress' => '^0.2.6',
                 'alpinejs' => '^3.0.6',
                 'bootstrap' => '^4.6.0',
                 'jquery' => '^3.5.1',
@@ -238,7 +238,7 @@ class InstallCommand extends Command
         // NPM Packages...
         Helpers::updateNodePackages(function ($packages) {
             return [
-                    'alpinejs' => '^2.7.3',
+                    'alpinejs' => '^3.0.6',
                     'bootstrap' => '^4.6.0',
                     'jquery' => '^3.5.1',
                     'popper.js' => '^1.16.1'
@@ -275,9 +275,9 @@ class InstallCommand extends Command
         // NPM Packages...
         Helpers::updateNodePackages(function ($packages) {
             return [
-                '@inertiajs/inertia' => '^0.8.2',
-                '@inertiajs/inertia-vue3' => '^0.3.5',
-                'alpinejs' => '^2.7.3',
+                '@inertiajs/inertia' => '^0.10.0',
+                '@inertiajs/inertia-vue3' => '^0.5.1',
+                'alpinejs' => '^3.2.6',
                 'bootstrap' => '^4.6.0',
                 'jquery' => '^3.5.1',
                 'popper.js' => '^1.16.1',
