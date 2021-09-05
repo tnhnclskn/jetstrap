@@ -9,9 +9,11 @@
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
 
-        <Link :href="route('dashboard')" :active="route().current('dashboard')">
-          Dashboard
-        </Link>
+        <li class="nav-item">
+          <Link class="nav-link" :href="route('dashboard')" :active="route().current('dashboard')">
+            Dashboard
+          </Link>
+        </li>
       </ul>
 
       <!-- Right navbar links -->
