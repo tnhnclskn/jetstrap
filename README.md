@@ -223,6 +223,8 @@ class AppServiceProvider extends ServiceProvider
 
 ## Breeze
 
+> **Warning!!!**: Jetstrap resources has been updated to work with the current version of Breeze but does not support swap for inertia-react resources. Feel free to make a PR with this feature if you can.
+
 According to the documentation, "Breeze provides a minimal and simple starting point for building a Laravel application with authentication.", but personally I'd like to think of it as Laravel Ui without Vue and Bootstrap.
 Recently I worked on a project that didn't use Vue or require a complex authentication system, so Breeze seemed like a good idea, but again I was faced with the TailwindCSS problem, so I figured why not include it to the Jetstrap package.
 
