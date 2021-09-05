@@ -10,9 +10,9 @@
         </li>
 
         <li class="nav-item">
-          <Link class="nav-link" :href="route('dashboard')" :active="route().current('dashboard')">
+          <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
             Dashboard
-          </Link>
+          </jet-nav-link>
         </li>
       </ul>
 
@@ -185,7 +185,7 @@ import JetApplicationMark from '@/Jetstream/ApplicationMark.vue'
 import JetDropdown from '@/Jetstream/Dropdown.vue'
 import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
 import JetNavLink from '@/Jetstream/NavLink.vue'
-import { Head, Link } from '@inertiajs/inertia-vue3'
+import { Head } from '@inertiajs/inertia-vue3'
 
 export default {
   components: {
@@ -196,7 +196,10 @@ export default {
     JetDropdown,
     JetDropdownLink,
     JetNavLink,
-    Link,
+  },
+  
+  props: {
+    title: String,
   },
 
   data() {
