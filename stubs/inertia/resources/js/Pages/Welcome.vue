@@ -6,7 +6,7 @@
       <div class="col-12">
         <div v-if="canLogin" class="d-flex justify-content-end">
           <div>
-            <Link v-if="$page.props.user" href="route('dashboard')" class="text-muted">
+            <Link v-if="$page.props.user" :href="route('dashboard')" class="text-muted">
               Dashboard
             </Link>
 
