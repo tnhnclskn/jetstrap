@@ -89,6 +89,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import JetActionMessage from '@/Jetstream/ActionMessage.vue'
 import JetActionSection from '@/Jetstream/ActionSection.vue'
 import JetButton from '@/Jetstream/Button.vue'
@@ -97,7 +98,7 @@ import JetInput from '@/Jetstream/Input.vue'
 import JetInputError from '@/Jetstream/InputError.vue'
 import JetSecondaryButton from '@/Jetstream/SecondaryButton.vue'
 
-export default {
+export default defineComponent({
   props: ['sessions'],
 
   components: {
@@ -143,5 +144,5 @@ export default {
       this.form.reset()
     },
   }
-}
+})
 </script>

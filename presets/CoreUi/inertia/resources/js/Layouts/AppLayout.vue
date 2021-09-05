@@ -1,5 +1,9 @@
 <template>
   <div style="width: 100%">
+    <Head :title="title" />
+
+    <jet-banner />
+
     <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
       <div class="c-sidebar-brand">
         <a href="/">
@@ -153,13 +157,14 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import JetApplicationLogo from '@/Jetstream/ApplicationLogo.vue'
 import JetApplicationMark from '@/Jetstream/ApplicationMark.vue'
 import JetDropdown from '@/Jetstream/Dropdown.vue'
 import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
 import JetNavLink from '@/Jetstream/NavLink.vue'
 
-export default {
+export default defineComponent({
   components: {
     JetApplicationLogo,
     JetApplicationMark,
@@ -197,5 +202,5 @@ export default {
       return window.location.pathname
     }
   }
-}
+})
 </script>

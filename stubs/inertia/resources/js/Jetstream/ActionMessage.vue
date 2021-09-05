@@ -11,7 +11,9 @@
 </template>
 
 <script>
-  export default {
-    props: ['on'],
-  }
+  import { defineComponent } from 'vue'
+
+  export default defineComponent({
+      props: ['on'],
+  })
 </script>

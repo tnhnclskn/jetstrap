@@ -11,17 +11,19 @@
 </template>
 
 <script>
-export default {
-  props: {
-    id: {
-      type: String,
-      required: true
-    },
+  import { defineComponent} from "vue"
 
-    classes: {
-      type: String,
-      default: 'nav-item dropdown'
+  export default defineComponent({
+    props: {
+      id: {
+        type: String,
+        required: true
+      },
+
+      classes: {
+        type: String,
+        default: 'nav-item dropdown'
+      }
     }
-  }
-}
+  })
 </script>

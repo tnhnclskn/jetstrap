@@ -238,6 +238,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import JetActionMessage from '@/Jetstream/ActionMessage.vue'
 import JetActionSection from '@/Jetstream/ActionSection.vue'
 import JetButton from '@/Jetstream/Button.vue'
@@ -251,7 +252,7 @@ import JetLabel from '@/Jetstream/Label.vue'
 import JetSecondaryButton from '@/Jetstream/SecondaryButton.vue'
 import JetSectionBorder from '@/Jetstream/SectionBorder.vue'
 
-export default {
+export default defineComponent({
   components: {
     JetActionMessage,
     JetActionSection,
@@ -358,5 +359,5 @@ export default {
       return this.availableRoles.find(r => r.key === role).name
     },
   },
-}
+})
 </script>

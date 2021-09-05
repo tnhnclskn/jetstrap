@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import DeleteUserForm from '@/Pages/Profile/Partials/DeleteUserForm.vue'
 import JetSectionBorder from '@/Jetstream/SectionBorder.vue'
@@ -43,7 +44,7 @@ import TwoFactorAuthenticationForm from '@/Pages/Profile/Partials/TwoFactorAuthe
 import UpdatePasswordForm from '@/Pages/Profile/Partials/UpdatePasswordForm.vue'
 import UpdateProfileInformationForm from '@/Pages/Profile/Partials/UpdateProfileInformationForm.vue'
 
-export default {
+export default defineComponent({
   props: ['sessions'],
 
   components: {
@@ -55,5 +56,5 @@ export default {
     UpdatePasswordForm,
     UpdateProfileInformationForm,
   },
-}
+})
 </script>

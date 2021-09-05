@@ -7,9 +7,10 @@
 </template>
 
 <script>
-import { Link } from '@inertiajs/inertia-vue3';
+import { defineComponent} from "vue"
+import { Link } from '@inertiajs/inertia-vue3'
 
-export default {
+export default defineComponent({
   components: {
     Link,
   },
@@ -23,5 +24,5 @@ export default {
           : 'c-header-nav-link'
     }
   }
-}
+})
 </script>

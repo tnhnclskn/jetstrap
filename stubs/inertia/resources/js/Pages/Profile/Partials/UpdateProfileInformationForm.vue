@@ -71,6 +71,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import JetButton from '@/Jetstream/Button.vue'
 import JetFormSection from '@/Jetstream/FormSection.vue'
 import JetInput from '@/Jetstream/Input.vue'
@@ -79,7 +80,7 @@ import JetLabel from '@/Jetstream/Label.vue'
 import JetActionMessage from '@/Jetstream/ActionMessage.vue'
 import JetSecondaryButton from '@/Jetstream/SecondaryButton.vue'
 
-export default {
+export default defineComponent({
   components: {
     JetActionMessage,
     JetButton,
@@ -152,5 +153,5 @@ export default {
       }
     },
   },
-}
+})
 </script>

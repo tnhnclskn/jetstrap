@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <Head :title="title" />
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <!-- Left navbar links -->
@@ -8,9 +9,9 @@
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
 
-        <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
+        <Link :href="route('dashboard')" :active="route().current('dashboard')">
           Dashboard
-        </jet-nav-link>
+        </Link>
       </ul>
 
       <!-- Right navbar links -->
@@ -182,15 +183,18 @@ import JetApplicationMark from '@/Jetstream/ApplicationMark.vue'
 import JetDropdown from '@/Jetstream/Dropdown.vue'
 import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
 import JetNavLink from '@/Jetstream/NavLink.vue'
+import { Head, Link } from '@inertiajs/inertia-vue3'
 
 export default {
   components: {
+    Head,
     JetApplicationLogo,
     JetApplicationMark,
     JetBanner,
     JetDropdown,
     JetDropdownLink,
     JetNavLink,
+    Link,
   },
 
   data() {

@@ -9,26 +9,28 @@
 </template>
 
 <script>
-export default {
-  props: {
-    id: {
-      type: String,
-      required: true
-    },
-    maxWidth: {
-      default: 'md'
-    }
-  },
+  import { defineComponent } from 'vue'
 
-  computed: {
-    maxWidthClass() {
-      return {
-        'sm': 'modal-sm',
-        'md': null,
-        'lg': 'modal-lg',
-        'xl': 'modal-xl',
-      }[this.maxWidth]
+  export default defineComponent({
+    props: {
+      id: {
+        type: String,
+        required: true
+      },
+      maxWidth: {
+        default: 'md'
+      }
+    },
+
+    computed: {
+      maxWidthClass() {
+        return {
+          'sm': 'modal-sm',
+          'md': null,
+          'lg': 'modal-lg',
+          'xl': 'modal-xl',
+        }[this.maxWidth]
+      }
     }
-  }
-}
+  })
 </script>

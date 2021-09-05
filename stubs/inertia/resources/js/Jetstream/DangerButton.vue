@@ -5,12 +5,14 @@
 </template>
 
 <script>
-  export default {
-    props: {
+  import { defineComponent } from 'vue'
+
+  export default defineComponent({
+  props: {
       type: {
         type: String,
         default: 'button',
       },
     }
-  }
+  })
 </script>
