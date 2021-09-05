@@ -163,14 +163,20 @@ import JetApplicationMark from '@/Jetstream/ApplicationMark.vue'
 import JetDropdown from '@/Jetstream/Dropdown.vue'
 import JetDropdownLink from '@/Jetstream/DropdownLink.vue'
 import JetNavLink from '@/Jetstream/NavLink.vue'
+import { Head } from '@inertiajs/inertia-vue3'
 
 export default defineComponent({
   components: {
+    Head,
     JetApplicationLogo,
     JetApplicationMark,
     JetDropdown,
     JetDropdownLink,
     JetNavLink,
+  },
+  
+  props: {
+    title: String,
   },
 
   data() {
