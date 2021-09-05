@@ -33,7 +33,7 @@ class Presets
         // NPM Packages...
         Helpers::updateNodePackages(function ($packages) {
             return [
-                    "@coreui/coreui" => "^3.3.0",
+                    "@coreui/coreui" => "^3.4.0",
                     "@fortawesome/fontawesome-free" => "^5.15.1",
                     "@popperjs/core" => "^2.5.3",
                     "perfect-scrollbar" => "^1.5.0"
