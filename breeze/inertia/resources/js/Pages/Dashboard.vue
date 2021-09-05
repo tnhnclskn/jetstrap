@@ -1,4 +1,6 @@
 <template>
+  <Head title="Dashboard" />
+
   <breeze-authenticated-layout>
     <template #header>
       <h2 class="h4 font-weight-bold">
@@ -16,10 +18,12 @@
 
 <script>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue'
+import { Head } from '@inertiajs/inertia-vue3'
 
 export default {
   components: {
     BreezeAuthenticatedLayout,
+    Head,
   },
 }
 </script>

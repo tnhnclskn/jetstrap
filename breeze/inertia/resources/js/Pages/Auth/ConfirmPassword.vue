@@ -1,4 +1,6 @@
 <template>
+  <Head title="Confirm Password" />
+
   <div class="card-body">
 
     <div class="mb-2">
@@ -28,6 +30,7 @@ import BreezeGuestLayout from "@/Layouts/Guest.vue"
 import BreezeInput from '@/Components/Input.vue'
 import BreezeLabel from '@/Components/Label.vue'
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue'
+import { Head } from '@inertiajs/inertia-vue3'
 
 export default {
   layout: BreezeGuestLayout,
@@ -37,6 +40,7 @@ export default {
     BreezeInput,
     BreezeLabel,
     BreezeValidationErrors,
+    Head,
   },
 
   data() {

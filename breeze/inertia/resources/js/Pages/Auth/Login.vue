@@ -1,4 +1,6 @@
 <template>
+  <Head title="Log in" />
+
   <div class="card-body">
 
     <breeze-validation-errors class="mb-3" />
@@ -30,9 +32,9 @@
 
       <div class="mb-0">
         <div class="d-flex justify-content-end align-items-baseline">
-          <inertia-link v-if="canResetPassword" :href="route('password.request')" class="text-muted mr-3">
+          <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted mr-3">
             Forgot your password?
-          </inertia-link>
+          </Link>
 
           <breeze-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
             Log in
@@ -50,16 +52,19 @@ import BreezeInput from '@/Components/Input.vue'
 import BreezeCheckbox from '@/Components/Checkbox.vue'
 import BreezeLabel from '@/Components/Label.vue'
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue'
+import { Head, Link } from '@inertiajs/inertia-vue3'
 
 export default {
   layout: BreezeGuestLayout,
 
   components: {
+    Head,
     BreezeButton,
     BreezeInput,
     BreezeCheckbox,
     BreezeLabel,
-    BreezeValidationErrors
+    BreezeValidationErrors,
+    Link,
   },
 
   props: {

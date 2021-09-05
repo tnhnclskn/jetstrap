@@ -1,10 +1,10 @@
 <template>
   <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
     <div class="c-sidebar-brand">
-      <a href="/">
+      <Link :href="route('dashboard')">
         <breeze-application-logo class="c-sidebar-brand-minimized" width="36" />
         <breeze-application-logo class="c-sidebar-brand-full" width="36" />
-      </a>
+      </Link>
     </div>
 
     <ul class="c-sidebar-nav">
@@ -90,13 +90,15 @@ import BreezeApplicationLogo from '@/Components/ApplicationLogo'
 import BreezeDropdown from '@/Components/Dropdown'
 import BreezeDropdownLink from '@/Components/DropdownLink'
 import BreezeNavLink from '@/Components/NavLink'
+import { Link } from '@inertiajs/inertia-vue3'
 
 export default {
   components: {
     BreezeApplicationLogo,
     BreezeDropdown,
     BreezeDropdownLink,
-    BreezeNavLink
+    BreezeNavLink,
+    Link,
   },
 
   data() {

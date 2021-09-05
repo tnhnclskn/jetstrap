@@ -1,4 +1,6 @@
 <template>
+  <Head title="Forgot Password" />
+  
   <div class="card-body">
     <div class="mb-2">
       Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
@@ -31,6 +33,7 @@ import BreezeGuestLayout from "@/Layouts/Guest.vue"
 import BreezeInput from '@/Components/Input.vue'
 import BreezeLabel from '@/Components/Label.vue'
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue'
+import { Head } from '@inertiajs/inertia-vue3'
 
 export default {
   layout: BreezeGuestLayout,
@@ -40,6 +43,7 @@ export default {
     BreezeInput,
     BreezeLabel,
     BreezeValidationErrors,
+    Head,
   },
 
   props: {

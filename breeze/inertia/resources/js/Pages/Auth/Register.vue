@@ -1,4 +1,6 @@
 <template>
+  <Head title="Register" />
+
   <div class="card-body">
 
     <breeze-validation-errors class="mb-3" />
@@ -36,9 +38,9 @@
 
       <div class="mb-0">
         <div class="d-flex justify-content-end align-items-baseline">
-          <inertia-link :href="route('login')" class="text-muted mr-3 text-decoration-none">
+          <Link :href="route('login')" class="text-muted mr-3 text-decoration-none">
             Already registered?
-          </inertia-link>
+          </Link>
 
           <breeze-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
             Register
@@ -56,16 +58,19 @@ import BreezeGuestLayout from "@/Layouts/Guest.vue"
 import BreezeInput from '@/Components/Input.vue'
 import BreezeLabel from '@/Components/Label.vue'
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue'
+import { Head, Link } from '@inertiajs/inertia-vue3'
 
 export default {
   layout: BreezeGuestLayout,
 
   components: {
+    Head,
     BreezeButton,
     BreezeCheckbox,
     BreezeInput,
     BreezeLabel,
     BreezeValidationErrors,
+    Link,
   },
 
   data() {

@@ -37,10 +37,10 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-warning elevation-2">
       <!-- Brand Logo -->
-      <a href="/" class="brand-link">
+      <Link :href="route('dashboard')" class="brand-link">
         <breeze-application-logo width="36" class="brand-image img-circle elevation-1" style="opacity: .8" />
         <span class="brand-text font-weight-light">AdminLTE</span>
-      </a>
+      </Link>
 
       <!-- Sidebar -->
       <div class="sidebar">
@@ -112,13 +112,15 @@ import BreezeApplicationLogo from '@/Components/ApplicationLogo.vue'
 import BreezeDropdown from '@/Components/Dropdown.vue'
 import BreezeDropdownLink from '@/Components/DropdownLink.vue'
 import BreezeNavLink from '@/Components/NavLink.vue'
+import { Link } from '@inertiajs/inertia-vue3'
 
 export default {
   components: {
     BreezeApplicationLogo,
     BreezeDropdown,
     BreezeDropdownLink,
-    BreezeNavLink
+    BreezeNavLink,
+    Link,
   },
 
   data() {

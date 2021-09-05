@@ -4,9 +4,9 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
-          <inertia-link :href="route('dashboard')">
+          <Link :href="route('dashboard')">
             <breeze-application-logo width="36" />
-          </inertia-link>
+          </Link>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
@@ -63,13 +63,15 @@ import BreezeApplicationLogo from '@/Components/ApplicationLogo.vue'
 import BreezeDropdown from '@/Components/Dropdown.vue'
 import BreezeDropdownLink from '@/Components/DropdownLink.vue'
 import BreezeNavLink from '@/Components/NavLink.vue'
+import { Link } from '@inertiajs/inertia-vue3'
 
 export default {
   components: {
     BreezeApplicationLogo,
     BreezeDropdown,
     BreezeDropdownLink,
-    BreezeNavLink
+    BreezeNavLink,
+    Link,
   },
 
   data() {
