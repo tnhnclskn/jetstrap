@@ -36,7 +36,10 @@ class Presets
                     "@coreui/coreui" => "^3.4.0",
                     "@fortawesome/fontawesome-free" => "^5.15.1",
                     "@popperjs/core" => "^2.5.3",
-                    "perfect-scrollbar" => "^1.5.0"
+                    'bootstrap' => '^4.6.0',
+                    'jquery' => '^3.5.1',
+                    "perfect-scrollbar" => "^1.5.0",
+                    'popper.js' => '^1.16.1'
                 ] + $packages;
         });
 
@@ -116,6 +119,9 @@ class Presets
             return [
                     "@fortawesome/fontawesome-free" => "^5.15.1",
                     "admin-lte" => "^3.1.0",
+                    'bootstrap' => '^4.6.0',
+                    'jquery' => '^3.5.1',
+                    'popper.js' => '^1.16.1',
                     "overlayscrollbars" => "^1.13.0"
                 ] + $packages;
         });
@@ -131,6 +137,7 @@ class Presets
             copy(__DIR__ . '/../../../presets/AdminLte/resources/views/components/nav-link.blade.php', resource_path('views/vendor/jetstream/components/nav-link.blade.php'));
             copy(__DIR__ . '/../../../presets/AdminLte/resources/views/components/welcome.blade.php', resource_path('views/vendor/jetstream/components/welcome.blade.php'));
 
+            
         } elseif ($stack == 'inertia') {
 
             // Necessary for vue compilation

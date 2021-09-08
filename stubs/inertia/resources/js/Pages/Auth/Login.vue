@@ -15,17 +15,17 @@
       </div>
 
       <form @submit.prevent="submit">
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="email" value="Email" />
           <jet-input id="email" type="email" v-model="form.email" required autofocus />
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="password" value="Password" />
           <jet-input id="password" type="password" v-model="form.password" required autocomplete="current-password" />
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
           <div class="custom-control custom-checkbox">
             <jet-checkbox id="remember_me" name="remember" v-model:checked="form.remember" />
 
@@ -41,7 +41,11 @@
               Forgot your password?
             </Link>
 
-            <jet-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+            <jet-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+              <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+
               Log in
             </jet-button>
           </div>

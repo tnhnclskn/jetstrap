@@ -30,11 +30,15 @@
         </template>
 
         <template #footer>
-          <jet-secondary-button data-dismiss="modal">
+          <jet-secondary-button data-bs-dismiss="modal">
             Cancel
           </jet-secondary-button>
 
-          <jet-danger-button class="ml-2" @click="deleteTeam" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+          <jet-danger-button class="ms-2" @click="deleteTeam" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+            <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
             Delete Team
           </jet-danger-button>
         </template>
@@ -64,7 +68,7 @@ export default defineComponent({
 
   data() {
     return {
-      bootstrap: null,
+      modal: null,
       deleting: false,
 
       form: this.$inertia.form()
@@ -73,14 +77,15 @@ export default defineComponent({
 
   methods: {
     confirmTeamDeletion() {
-      this.bootstrap = $('#confirmingTeamDeletionModal')
-      this.bootstrap.modal('toggle')
+      let el = document.querySelector('#confirmingTeamDeletionModal')
+      this.modal = new bootstrap.Modal(el)
+      this.modal.show()
     },
 
     deleteTeam() {
       this.form.delete(route('teams.destroy', this.team), {
         errorBag: 'deleteTeam',
-        onSuccess: () => this.bootstrap.modal('toggle')
+        onSuccess: () => this.modal.hide()
       });
     },
   },

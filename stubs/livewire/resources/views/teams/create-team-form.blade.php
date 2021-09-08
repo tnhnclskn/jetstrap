@@ -22,7 +22,7 @@
         </div>
 
         <div class="w-md-75">
-            <div class="form-group">
+            <div class="mb-3">
                 <x-jet-label for="name" value="{{ __('Team Name') }}" />
                 <x-jet-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}"
                              wire:model.defer="state.name" autofocus />

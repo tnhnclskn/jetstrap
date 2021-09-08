@@ -35,6 +35,10 @@
                 </x-jet-secondary-button>
 
                 <x-jet-danger-button wire:click="deleteTeam" wire:loading.attr="disabled">
+                    <div wire:loading wire:target="deleteTeam" class="spinner-border spinner-border-sm" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
                     {{ __('Delete Team') }}
                 </x-jet-danger-button>
             </x-slot>

@@ -21,12 +21,12 @@
       <jet-validation-errors class="mb-3" />
 
       <form @submit.prevent="submit">
-        <div class="form-group" v-if="! recovery">
+        <div class="mb-3" v-if="! recovery">
           <jet-label for="code" value="Code" />
           <jet-input ref="code" id="code" type="text" inputmode="numeric" v-model="form.code" autofocus autocomplete="one-time-code" />
         </div>
 
-        <div class="form-group" v-else>
+        <div class="mb-3" v-else>
           <jet-label for="recovery_code" value="Recovery Code" />
           <jet-input ref="recovery_code" id="recovery_code" type="text" v-model="form.recovery_code" autocomplete="one-time-code" />
         </div>
@@ -43,6 +43,10 @@
           </button>
 
           <jet-button :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+            <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
             Log in
           </jet-button>
         </div>

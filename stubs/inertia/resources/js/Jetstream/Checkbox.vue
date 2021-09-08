@@ -1,6 +1,6 @@
 <template>
   <input type="checkbox" :value="value" v-model="proxyChecked"
-         class="custom-control-input">
+         class="form-check-input">
 </template>
 
 <script>

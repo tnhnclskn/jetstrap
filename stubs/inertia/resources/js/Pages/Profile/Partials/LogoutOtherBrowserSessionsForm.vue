@@ -80,6 +80,10 @@
           </jet-secondary-button>
 
           <jet-button class="ml-2" @click="logoutOtherBrowserSessions" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+            <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
             Log out Other Browser Sessions
           </jet-button>
         </template>
@@ -115,7 +119,8 @@ export default defineComponent({
     return {
       form: this.$inertia.form({
         password: '',
-      })
+      }),
+      modal: null
     }
   },
 
@@ -123,8 +128,9 @@ export default defineComponent({
     confirmLogout() {
       this.form.password = ''
 
-      this.bootstrap = $('#confirmingLogoutModal')
-      this.bootstrap.modal('toggle')
+      let el = document.querySelector('#confirmingLogoutModal')
+      this.modal = new bootstrap.Modal(el)
+      this.modal.show()
 
       setTimeout(() => this.$refs.password.focus(), 250)
     },
@@ -139,7 +145,7 @@ export default defineComponent({
     },
 
     closeModal() {
-      this.bootstrap.modal('toggle')
+      this.modal.hide()
 
       this.form.reset()
     },

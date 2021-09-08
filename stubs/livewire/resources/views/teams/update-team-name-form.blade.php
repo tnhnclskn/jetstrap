@@ -17,7 +17,7 @@
             <x-jet-label value="{{ __('Team Owner') }}" />
 
             <div class="d-flex mt-2">
-                <img class="rounded-circle mr-2" width="48" src="{{ $team->owner->profile_photo_url }}">
+                <img class="rounded-circle me-2" width="48" src="{{ $team->owner->profile_photo_url }}">
                 <div>
                     <div>{{ $team->owner->name }}</div>
                     <div class="text-muted">{{ $team->owner->email }}</div>
@@ -45,6 +45,10 @@
         <x-slot name="actions">
 			<div class="d-flex align-items-baseline">
 				<x-jet-button>
+                    <div wire:loading class="spinner-border spinner-border-sm" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    
 					{{ __('Save') }}
 				</x-jet-button>
 			</div>

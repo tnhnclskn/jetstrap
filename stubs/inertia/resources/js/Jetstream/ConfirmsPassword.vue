@@ -24,11 +24,15 @@
       </template>
 
       <template #footer>
-        <jet-secondary-button data-dismiss="modal">
+        <jet-secondary-button data-bs-dismiss="modal">
           Cancel
         </jet-secondary-button>
 
-        <jet-button class="ml-2" @click="confirmPassword" :class="{ 'text-black-50': form.processing }" :disabled="form.processing">
+        <jet-button class="ms-2" @click="confirmPassword" :class="{ 'text-black-50': form.processing }" :disabled="form.processing">
+          <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          
           {{ button }}
         </jet-button>
       </template>
@@ -69,7 +73,7 @@
 
     data() {
       return {
-        bootstrap: null,
+        modal: null,
 
         form: this.$inertia.form({
           password: '',
@@ -83,13 +87,14 @@
     methods: {
       startConfirmingPassword() {
         this.form.error = '';
-        this.bootstrap = $('#confirmingPasswordModal');
+        let el = document.querySelector('#confirmingPasswordModal')
+        this.modal = new bootstrap.Modal(el)
 
         axios.get(route('password.confirmation')).then(response => {
           if (response.data.confirmed) {
             this.$emit('confirmed');
           } else {
-            this.bootstrap.modal('toggle');
+            this.modal.toggle()
             this.form.password = '';
 
             setTimeout(() => {

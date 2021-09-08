@@ -14,7 +14,7 @@
       </jet-action-message>
 
       <!-- Profile Photo -->
-      <div class="form-group" v-if="$page.props.jetstream.managesProfilePhotos">
+      <div class="mb-3" v-if="$page.props.jetstream.managesProfilePhotos">
         <!-- Profile Photo File Input -->
         <input type="file" hidden
                ref="photo"
@@ -45,7 +45,7 @@
 
       <div class="w-75">
         <!-- Name -->
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="name" value="Name" />
           <jet-input id="name" type="text" v-model="form.name"
                      :class="{ 'is-invalid': form.errors.name }" autocomplete="name" />
@@ -53,7 +53,7 @@
         </div>
 
         <!-- Email -->
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="email" value="Email" />
           <jet-input id="email" type="email" v-model="form.email"
                      :class="{ 'is-invalid': form.errors.email }" />
@@ -64,6 +64,10 @@
 
     <template #actions>
       <jet-button :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+        <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
         Save
       </jet-button>
     </template>

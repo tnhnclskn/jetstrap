@@ -63,6 +63,10 @@
 
         <template #actions>
           <jet-button :class="{ 'text-white-50': addTeamMemberForm.processing }" :disabled="addTeamMemberForm.processing">
+            <div v-show="addTeamMemberForm.processing" class="spinner-border spinner-border-sm" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
             Add
           </jet-button>
         </template>
@@ -183,11 +187,15 @@
       </template>
 
       <template #footer>
-        <jet-secondary-button data-dismiss="modal">
+        <jet-secondary-button data-bs-dismiss="modal">
           Cancel
         </jet-secondary-button>
 
         <jet-button class="ml-2" @click="updateRole" :class="{ 'text-black-50': updateRoleForm.processing }" :disabled="updateRoleForm.processing">
+          <div v-show="updateRoleForm.processing" class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
           Save
         </jet-button>
       </template>
@@ -204,11 +212,15 @@
       </template>
 
       <template #footer>
-        <jet-secondary-button data-dismiss="modal">
+        <jet-secondary-button data-bs-dismiss="modal">
           Cancel
         </jet-secondary-button>
 
-        <jet-danger-button class="ml-2" @click="leaveTeam" :class="{ 'text-white-50': leaveTeamForm.processing }" :disabled="leaveTeamForm.processing">
+        <jet-danger-button class="ms-2" @click="leaveTeam" :class="{ 'text-white-50': leaveTeamForm.processing }" :disabled="leaveTeamForm.processing">
+          <div v-show="leaveTeamForm.processing" class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
           Leave
         </jet-danger-button>
       </template>
@@ -225,11 +237,15 @@
       </template>
 
       <template #footer>
-        <jet-secondary-button data-dismiss="modal">
+        <jet-secondary-button data-bs-dismiss="modal">
           Cancel
         </jet-secondary-button>
 
-        <jet-danger-button class="ml-2" @click="removeTeamMember" :class="{ 'text-white-50': removeTeamMemberForm.processing }" :disabled="removeTeamMemberForm.processing">
+        <jet-danger-button class="ms-2" @click="removeTeamMember" :class="{ 'text-white-50': removeTeamMemberForm.processing }" :disabled="removeTeamMemberForm.processing">
+          <div v-show="removeTeamMemberForm.processing" class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
           Remove
         </jet-danger-button>
       </template>
@@ -292,7 +308,7 @@ export default defineComponent({
       managingRoleFor: null,
       confirmingLeavingTeam: false,
       teamMemberBeingRemoved: null,
-      bootstrap: null
+      modal: null
     }
   },
 
@@ -316,8 +332,9 @@ export default defineComponent({
       this.updateRoleForm.role = teamMember.membership.role
       this.currentlyManagingRole = true
 
-      this.bootstrap = $('#currentlyManagingRoleModal')
-      this.bootstrap.modal('toggle')
+      let el = document.querySelector('#currentlyManagingRoleModal')
+      this.modal = new bootstrap.Modal(el)
+      this.modal.toggle()
     },
 
     updateRole() {
@@ -329,8 +346,10 @@ export default defineComponent({
 
     confirmLeavingTeam() {
       this.confirmingLeavingTeam = true
-      this.bootstrap = $('#confirmingLeavingTeamModal')
-      this.bootstrap.modal('toggle')
+
+      let el = document.querySelector('#confirmingLeavingTeamModal')
+      this.modal = new bootstrap.Modal(el)
+      this.modal.toggle()
     },
 
     leaveTeam() {
@@ -341,8 +360,10 @@ export default defineComponent({
 
     confirmTeamMemberRemoval(teamMember) {
       this.teamMemberBeingRemoved = teamMember
-      this.bootstrap = $('#teamMemberBeingRemovedModal')
-      this.bootstrap.modal('toggle')
+
+      let el = document.querySelector('#teamMemberBeingRemovedModal')
+      this.modal = new bootstrap.Modal(el)
+      this.modal.toggle()
     },
 
     removeTeamMember() {
@@ -351,7 +372,7 @@ export default defineComponent({
         preserveState: true,
       }).then(() => {
         this.teamMemberBeingRemoved = null
-        this.bootstrap.modal('toggle')
+        this.modal.toggle()
       })
     },
 

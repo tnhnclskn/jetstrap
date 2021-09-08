@@ -17,7 +17,7 @@
 
         <div class="w-75">
           <!-- Token Name -->
-          <div class="form-group">
+          <div class="mb-3">
             <jet-label for="name" value="Name" />
             <jet-input id="name" type="text" v-model="createApiTokenForm.name" autofocus
                        :class="{ 'is-invalid': createApiTokenForm.errors.name }" />
@@ -30,10 +30,10 @@
 
             <div class="mt-2 row">
               <div class="col-6" v-for="permission in availablePermissions" :key="permission">
-                <div class="form-group">
-                  <div class="custom-control custom-checkbox">
+                <div class="mb-3">
+                  <div class="form-check">
                     <jet-checkbox :value="permission" v-model:checked="createApiTokenForm.permissions" :id="`create-${permission}`"/>
-                    <label class="custom-control-label" :for="`create-${permission}`">
+                    <label class="form-check-label" :for="`create-${permission}`">
                       {{ permission }}
                     </label>
                   </div>
@@ -46,6 +46,9 @@
 
       <template #actions>
         <jet-button :class="{ 'text-white-50': createApiTokenForm.processing }" :disabled="createApiTokenForm.processing">
+          <div v-show="createApiTokenForm.processing" class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
           Create
         </jet-button>
       </template>
@@ -127,10 +130,10 @@
       <template #content>
         <div class="mt-2 row">
           <div class="col-6" v-for="permission in availablePermissions" :key="permission">
-            <div class="form-group">
-              <div class="custom-control custom-checkbox">
+            <div class="mb-3">
+              <div class="form-check">
                 <jet-checkbox :value="permission" v-model:checked="updateApiTokenForm.permissions" :id="`update-${permission}`"/>
-                <label class="custom-control-label" :for="`update-${permission}`">
+                <label class="form-check-label" :for="`update-${permission}`">
                   {{ permission }}
                 </label>
               </div>

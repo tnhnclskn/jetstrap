@@ -45,6 +45,10 @@
           </jet-secondary-button>
 
           <jet-danger-button @click="deleteUser" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+            <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
             Delete Account
           </jet-danger-button>
         </template>
@@ -74,7 +78,7 @@ export default defineComponent({
 
   data() {
     return {
-      bootstrap: null,
+      modal: null,
       form: this.$inertia.form({
         password: '',
       })
@@ -85,8 +89,9 @@ export default defineComponent({
     confirmUserDeletion() {
       this.form.password = '';
 
-      this.bootstrap = $('#confirmingUserDeletionModal')
-      this.bootstrap.modal('toggle')
+      let el = document.querySelector('#confirmingUserDeletionModal')
+      this.modal = new bootstrap.Modal(el)
+      this.modal.show()
 
       setTimeout(() => this.$refs.password.focus(), 250)
     },
@@ -103,7 +108,7 @@ export default defineComponent({
     closeModal() {
       this.form.reset()
 
-      this.bootstrap.modal('toggle')
+      this.modal.hide()
     },
   },
 })

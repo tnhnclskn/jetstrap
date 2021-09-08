@@ -54,6 +54,10 @@
         <div v-if="! twoFactorEnabled">
           <jet-confirms-password @confirmed="enableTwoFactorAuthentication">
             <jet-button type="button" :class="{ 'text-white-50': enabling }" :disabled="enabling">
+              <div v-show="enabling" class="spinner-border spinner-border-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+
               Enable
             </jet-button>
           </jet-confirms-password>
@@ -61,14 +65,14 @@
 
         <div v-else>
           <jet-confirms-password @confirmed="regenerateRecoveryCodes">
-            <jet-secondary-button class="mr-3"
+            <jet-secondary-button class="me-3"
                                   v-if="recoveryCodes.length > 0">
               Regenerate Recovery Codes
             </jet-secondary-button>
           </jet-confirms-password>
 
           <jet-confirms-password @confirmed="showRecoveryCodes">
-            <jet-secondary-button class="mr-3" v-if="recoveryCodes.length == 0">
+            <jet-secondary-button class="me-3" v-if="recoveryCodes.length == 0">
               Show Recovery Codes
             </jet-secondary-button>
           </jet-confirms-password>
@@ -77,6 +81,10 @@
             <jet-danger-button
                 :class="{ 'text-white-50': disabling }"
                 :disabled="disabling">
+              <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+
               Disable
             </jet-danger-button>
           </jet-confirms-password>

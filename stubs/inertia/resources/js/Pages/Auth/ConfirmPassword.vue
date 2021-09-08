@@ -15,13 +15,17 @@
       <jet-validation-errors class="mb-2" />
 
       <form @submit.prevent="submit">
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="password" value="Password" />
           <jet-input id="password" type="password" v-model="form.password" required autocomplete="current-password" autofocus />
         </div>
 
         <div class="d-flex justify-content-end mt-2">
-          <jet-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+          <jet-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+            <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            
             Confirm
           </jet-button>
         </div>

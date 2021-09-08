@@ -24,6 +24,10 @@
             :class="{ 'text-white-50': form.processing }"
             :disabled="form.processing"
           >
+            <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
             Resend Verification Email
           </jet-button>
 

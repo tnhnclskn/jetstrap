@@ -11,27 +11,27 @@
       <jet-validation-errors class="mb-3" />
 
       <form @submit.prevent="submit">
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="name" value="Name" />
           <jet-input id="name" type="text" v-model="form.name" required autofocus autocomplete="name" />
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="email" value="Email" />
           <jet-input id="email" type="email" v-model="form.email" required />
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="password" value="Password" />
           <jet-input id="password" type="password" v-model="form.password" required autocomplete="new-password" />
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
           <jet-label for="password_confirmation" value="Confirm Password" />
           <jet-input id="password_confirmation" type="password" v-model="form.password_confirmation" required autocomplete="new-password" />
         </div>
 
-        <div class="form-group" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">
+        <div class="mb-3" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">
           <div class="custom-control custom-checkbox">
             <jet-checkbox name="terms" id="terms" v-model:checked="form.terms" />
 
@@ -47,7 +47,11 @@
               Already registered?
             </Link>
 
-            <jet-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+            <jet-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+              <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+
               Register
             </jet-button>
           </div>
