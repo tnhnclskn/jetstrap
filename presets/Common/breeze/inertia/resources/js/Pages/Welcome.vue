@@ -22,7 +22,7 @@
               <Link
                 v-if="canRegister"
                 :href="route('register')"
-                class="ms-4 text-muted"
+                class="ml-4 text-muted"
               >
                 Register
               </Link>
@@ -51,7 +51,7 @@
 
           <div class="card shadow-sm">
             <div class="row">
-              <div class="col-md-6 pe-0">
+              <div class="col-md-6 pr-0">
                 <div class="card-body border-right border-bottom p-3 h-100">
                   <div class="d-flex flex-row bd-highlight pt-2">
                     <div>
@@ -70,7 +70,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <div class="ps-3">
+                    <div class="pl-3">
                       <div class="mb-2">
                         <a
                           href="https://laravel.com/docs"
@@ -89,7 +89,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 ps-0">
+              <div class="col-md-6 pl-0">
                 <div class="card-body border-bottom p-3 h-100">
                   <div class="d-flex flex-row bd-highlight pt-2">
                     <div>
@@ -109,7 +109,7 @@
                         <path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
                       </svg>
                     </div>
-                    <div class="ps-3">
+                    <div class="pl-3">
                       <div class="mb-2">
                         <a
                           href="https://laracasts.com"
@@ -127,7 +127,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 pe-0">
+              <div class="col-md-6 pr-0">
                 <div class="card-body border-right p-3 h-100">
                   <div class="d-flex flex-row bd-highlight pt-2">
                     <div>
@@ -146,7 +146,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <div class="ps-3 text-sm">
+                    <div class="pl-3 text-sm">
                       <div class="mb-2">
                         <a
                           href="https://laravel-news.com/"
@@ -164,7 +164,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 ps-0">
+              <div class="col-md-6 pl-0">
                 <div class="card-body p-3 h-100">
                   <div class="d-flex flex-row bd-highlight pt-2">
                     <div>
@@ -183,7 +183,7 @@
                         ></path>
                       </svg>
                     </div>
-                    <div class="ps-3">
+                    <div class="pl-3">
                       <div class="mb-2">
                         <span class="h5 font-weight-bolder text-dark"
                           >Vibrant Ecosystem</span
@@ -273,7 +273,7 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   viewBox="0 0 24 24"
-                  class="ms-4 text-muted"
+                  class="ml-4 text-muted"
                   style="width: 18px"
                 >
                   <path

@@ -20,10 +20,6 @@
 
       <div class="d-flex justify-content-end mt-4">
         <breeze-button :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
-          <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-            
           Email Password Reset Link
         </breeze-button>
       </div>

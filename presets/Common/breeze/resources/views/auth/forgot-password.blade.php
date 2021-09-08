@@ -22,7 +22,7 @@
                 @csrf
 
                 <!-- Email Address -->
-                    <div class="mb-3">
+                    <div class="form-group">
                         <x-label for="email" :value="__('Email')" />
 
                         <x-input id="email" type="email" name="email" :value="old('email')" required autofocus />

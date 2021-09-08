@@ -6,31 +6,31 @@
     <breeze-validation-errors class="mb-3" />
 
     <form @submit.prevent="submit">
-      <div class="mb-3">
+      <div class="form-group">
         <breeze-label for="name" value="Name" />
         <breeze-input id="name" type="text" v-model="form.name" required autofocus autocomplete="name" />
       </div>
 
-      <div class="mb-3">
+      <div class="form-group">
         <breeze-label for="email" value="Email" />
         <breeze-input id="email" type="email" v-model="form.email" required />
       </div>
 
-      <div class="mb-3">
+      <div class="form-group">
         <breeze-label for="password" value="Password" />
         <breeze-input id="password" type="password" v-model="form.password" required autocomplete="new-password" />
       </div>
 
-      <div class="mb-3">
+      <div class="form-group">
         <breeze-label for="password_confirmation" value="Confirm Password" />
         <breeze-input id="password_confirmation" type="password" v-model="form.password_confirmation" required autocomplete="new-password" />
       </div>
 
-      <div class="mb-3" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">
-        <div class="form-check">
+      <div class="form-group" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">
+        <div class="custom-control custom-checkbox">
           <breeze-checkbox name="terms" id="terms" v-model:checked="form.terms" />
 
-          <label class="form-check-label" for="terms">
+          <label class="custom-control-label" for="terms">
             I agree to the <a target="_blank" :href="route('terms.show')">Terms of Service</a> and <a target="_blank" :href="route('policy.show')">Privacy Policy</a>
           </label>
         </div>
@@ -42,11 +42,7 @@
             Already registered?
           </Link>
 
-          <breeze-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
-            <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            
+          <breeze-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
             Register
           </breeze-button>
         </div>

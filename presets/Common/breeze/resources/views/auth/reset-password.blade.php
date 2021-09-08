@@ -17,21 +17,21 @@
                 <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
                 <!-- Email Address -->
-                <div class="mb-3">
+                <div class="form-group">
                     <x-label for="email" :value="__('Email')" />
 
                     <x-input id="email" type="email" name="email" :value="old('email', $request->email)" required autofocus />
                 </div>
 
                 <!-- Password -->
-                <div class="mb-3">
+                <div class="form-group">
                     <x-label for="password" :value="__('Password')" />
 
                     <x-input id="password" type="password" name="password" required />
                 </div>
 
                 <!-- Confirm Password -->
-                <div class="mb-3">
+                <div class="form-group">
                     <x-label for="password_confirmation" :value="__('Confirm Password')" />
 
                     <x-input id="password_confirmation" type="password"

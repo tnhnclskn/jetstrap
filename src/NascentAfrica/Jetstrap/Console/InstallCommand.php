@@ -345,6 +345,11 @@ class InstallCommand extends Command
         }
     }
 
+    /**
+     * Revert to bootstrap 4 compatible resources when using presets.
+     *
+     * @return void
+     */
     protected function bootstrap4JetstreamPresetResources()
     {
         $stack = $this->argument('stack');
@@ -422,6 +427,30 @@ class InstallCommand extends Command
                 copy(__DIR__ . '/../../../../presets/Common/stubs/inertia/resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue', resource_path('js/Pages/Teams/Partials/UpdateTeamNameForm.vue'));
             }
 
+        } elseif ($stack === 'breeze') {
+            copy(__DIR__ . '/../../../../presets/Common/components/dropdown.blade.php', resource_path('views/components/dropdown.blade.php'));
+
+            copy(__DIR__ . '/../../../../presets/Common/components/checkbox.blade.php', resource_path('views/components/checkbox.blade.php'));
+
+            copy(__DIR__ . '/../../../../presets/Common/breeze/resources/views/auth/confirm-password.blade.php', resource_path('views/auth/confirm-password.blade.php'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/resources/views/auth/forgot-password.blade.php', resource_path('views/auth/forgot-password.blade.php'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/resources/views/auth/login.blade.php', resource_path('views/auth/login.blade.php'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/resources/views/auth/register.blade.php', resource_path('views/auth/register.blade.php'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/resources/views/auth/reset-password.blade.php', resource_path('views/auth/reset-password.blade.php'));
+
+            copy(__DIR__ . '/../../../../presets/Common/breeze/resources/views/layouts/navigation.blade.php', resource_path('views/layouts/navigation.blade.php'));
+
+        } elseif ($stack === 'breeze-inertia') {
+            copy(__DIR__ . '/../../../../presets/Common/breeze/inertia/resources/js/Layouts/Authenticated.vue', resource_path('js/Layouts/Authenticated.vue'));
+
+            copy(__DIR__ . '/../../../../presets/Common/breeze/inertia/resources/js/Pages/Auth/ConfirmPassword.vue', resource_path('js/Pages/Auth/ConfirmPassword.vue'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/inertia/resources/js/Pages/Auth/ForgotPassword.vue', resource_path('js/Pages/Auth/ForgotPassword.vue'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/inertia/resources/js/Pages/Auth/Login.vue', resource_path('js/Pages/Auth/Login.vue'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/inertia/resources/js/Pages/Auth/Register.vue', resource_path('js/Pages/Auth/Register.vue'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/inertia/resources/js/Pages/Auth/ResetPassword.vue', resource_path('js/Pages/Auth/ResetPassword.vue'));
+            copy(__DIR__ . '/../../../../presets/Common/breeze/inertia/resources/js/Pages/Auth/VerifyEmail.vue', resource_path('js/Pages/Auth/VerifyEmail.vue'));
+
+            copy(__DIR__ . '/../../../../presets/Common/breeze/inertia/resources/js/Pages/Welcome.vue', resource_path('js/Pages/Welcome.vue'));
         }
     }
 }

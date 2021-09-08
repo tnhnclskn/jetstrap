@@ -18,7 +18,7 @@
             @csrf
 
             <!-- Password -->
-            <div class="mb-3">
+            <div class="form-group">
                 <x-label for="password" :value="__('Password')" />
 
                 <x-input id="password" type="password"
@@ -27,7 +27,7 @@
             </div>
 
             <div class="d-flex justify-content-end mt-4">
-                <x-button class="ms-4">
+                <x-button class="ml-4">
                     {{ __('Confirm') }}
                 </x-button>
             </div>

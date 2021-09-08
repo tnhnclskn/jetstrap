@@ -14,21 +14,21 @@
                 @csrf
 
                 <!-- Name -->
-                <div class="mb-3">
+                <div class="form-group">
                     <x-label for="name" :value="__('Name')" />
 
                     <x-input id="name" type="text" name="name" :value="old('name')" required autofocus />
                 </div>
 
                 <!-- Email Address -->
-                <div class="mb-3">
+                <div class="form-group">
                     <x-label for="email" :value="__('Email')" />
 
                     <x-input id="email" type="email" name="email" :value="old('email')" required />
                 </div>
 
                 <!-- Password -->
-                <div class="mb-3">
+                <div class="form-group">
                     <x-label for="password" :value="__('Password')" />
 
                     <x-input id="password" type="password"
@@ -37,7 +37,7 @@
                 </div>
 
                 <!-- Confirm Password -->
-                <div class="mb-3">
+                <div class="form-group">
                     <x-label for="password_confirmation" :value="__('Confirm Password')" />
 
                     <x-input id="password_confirmation" type="password"
@@ -46,7 +46,7 @@
 
                 <div class="mb-0">
                     <div class="d-flex justify-content-end align-items-baseline">
-                        <a class="text-muted me-3 text-decoration-none" href="{{ route('login') }}">
+                        <a class="text-muted mr-3 text-decoration-none" href="{{ route('login') }}">
                             {{ __('Already registered?') }}
                         </a>
 

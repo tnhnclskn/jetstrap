@@ -10,21 +10,21 @@
     </div>
 
     <form @submit.prevent="submit">
-      <div class="mb-3">
+      <div class="form-group">
         <breeze-label for="email" value="Email" />
         <breeze-input id="email" type="email" v-model="form.email" required autofocus />
       </div>
 
-      <div class="mb-3">
+      <div class="form-group">
         <breeze-label for="password" value="Password" />
         <breeze-input id="password" type="password" v-model="form.password" required autocomplete="current-password" />
       </div>
 
-      <div class="mb-3">
-        <div class="form-check">
+      <div class="form-group">
+        <div class="custom-control custom-checkbox">
           <breeze-checkbox id="remember_me" name="remember" v-model:checked="form.remember" />
 
-          <label class="form-check-label" for="remember_me">
+          <label class="custom-control-label" for="remember_me">
             Remember Me
           </label>
         </div>
@@ -32,15 +32,11 @@
 
       <div class="mb-0">
         <div class="d-flex justify-content-end align-items-baseline">
-          <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted me-3">
+          <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted mr-3">
             Forgot your password?
           </Link>
 
-          <breeze-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
-            <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            
+          <breeze-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
             Log in
           </breeze-button>
         </div>

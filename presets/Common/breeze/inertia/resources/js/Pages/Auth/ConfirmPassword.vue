@@ -10,17 +10,13 @@
     <breeze-validation-errors class="mb-2" />
 
     <form @submit.prevent="submit">
-      <div class="mb-3">
+      <div class="form-group">
         <breeze-label for="password" value="Password" />
         <breeze-input id="password" type="password" v-model="form.password" required autocomplete="current-password" autofocus />
       </div>
 
       <div class="d-flex justify-content-end mt-2">
-        <breeze-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
-          <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-            
+        <breeze-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
           Confirm
         </breeze-button>
       </div>
