@@ -26,16 +26,6 @@
         <breeze-input id="password_confirmation" type="password" v-model="form.password_confirmation" required autocomplete="new-password" />
       </div>
 
-      <div class="mb-3" v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature">
-        <div class="form-check">
-          <breeze-checkbox name="terms" id="terms" v-model:checked="form.terms" />
-
-          <label class="form-check-label" for="terms">
-            I agree to the <a target="_blank" :href="route('terms.show')">Terms of Service</a> and <a target="_blank" :href="route('policy.show')">Privacy Policy</a>
-          </label>
-        </div>
-      </div>
-
       <div class="mb-0">
         <div class="d-flex justify-content-end align-items-baseline">
           <Link :href="route('login')" class="text-muted mr-3 text-decoration-none">
