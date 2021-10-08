@@ -17,13 +17,13 @@
       </ul>
 
       <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
         <!-- Team Management -->
         <jet-dropdown id="teamManagementDropdown" classes="nav-item dropdown user-menu">
           <template #trigger>
             {{ $page.props.user.current_team.name }}
 
-            <svg class="ml-2" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <svg class="ms-2" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </template>
@@ -55,7 +55,7 @@
                 <form @submit.prevent="switchToTeam(team)">
                   <jet-dropdown-link as="button">
                     <div class="d-flex">
-                      <svg v-if="team.id == $page.props.user.current_team_id" class="mr-1 text-success" width="20" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg v-if="team.id == $page.props.user.current_team_id" class="me-1 text-success" width="20" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                       </svg>
                       <span class="text-truncate" style="width: 12rem;">{{ team.name }}</span>
@@ -70,9 +70,9 @@
         <jet-dropdown id="settingsDropdown" classes="nav-item dropdown user-menu">
           <template #trigger>
             <img v-if="$page.props.jetstream.managesProfilePhotos" class="user-image img-circle elevation-1" width="32" height="32" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
-            <span v-else class="d-none d-md-inline ml-2">{{ $page.props.user.name }}</span>
+            <span v-else class="d-none d-md-inline ms-2">{{ $page.props.user.name }}</span>
 
-            <svg class="ml-2" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <svg class="ms-2" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </template>

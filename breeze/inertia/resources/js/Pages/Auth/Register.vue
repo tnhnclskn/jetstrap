@@ -28,7 +28,7 @@
 
       <div class="mb-0">
         <div class="d-flex justify-content-end align-items-baseline">
-          <Link :href="route('login')" class="text-muted mr-3 text-decoration-none">
+          <Link :href="route('login')" class="text-muted me-3 text-decoration-none">
             Already registered?
           </Link>
 

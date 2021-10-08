@@ -18,7 +18,7 @@
         <jet-label value="Team Owner" />
 
         <div class="d-flex items-center mt-2">
-          <img class="rounded-circle mr-2" width="48" :src="team.owner.profile_photo_url" :alt="team.owner.name">
+          <img class="rounded-circle me-2" width="48" :src="team.owner.profile_photo_url" :alt="team.owner.name">
 
           <div>
             <div>{{ team.owner.name }}</div>

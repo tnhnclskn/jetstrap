@@ -14,7 +14,7 @@
             <div class="d-flex mt-2">
                 <img class="rounded-circle" width="48" src="{{ $this->user->profile_photo_url }}">
 
-                <div class="ml-2">
+                <div class="ms-2">
                     <div>{{ $this->user->name }}</div>
                     <div class="text-muted">{{ $this->user->email }}</div>
                 </div>

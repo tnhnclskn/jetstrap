@@ -41,7 +41,7 @@
                     <img x-bind:src="photoPreview" class="rounded-circle" width="80px" height="80px">
                 </div>
 
-                <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
+                <x-jet-secondary-button class="mt-2 me-2" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('Select A New Photo') }}
 				</x-jet-secondary-button>
 				

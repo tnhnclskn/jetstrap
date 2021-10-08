@@ -32,7 +32,7 @@
           <img :src="photoPreview" class="rounded-circle" width="80px" height="80px">
         </div>
 
-        <jet-secondary-button class="mt-2 mr-2" type="button" @click.prevent="selectNewPhoto">
+        <jet-secondary-button class="mt-2 me-2" type="button" @click.prevent="selectNewPhoto">
           Select A New Photo
         </jet-secondary-button>
 

@@ -49,7 +49,7 @@
                       {{ role.name }}
                   </span>
 
-                  <svg v-if="addTeamMemberForm.role == role.key" class="ml-1 text-success font-weight-light" width="20" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <svg v-if="addTeamMemberForm.role == role.key" class="ms-1 text-success font-weight-light" width="20" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
 
                 <!-- Role Description -->
@@ -135,7 +135,7 @@
                 {{ displayableRole(user.membership.role) }}
               </button>
 
-              <div class="btn btn-link text-secondary disabled text-decoration-none ml-2" v-else-if="availableRoles.length > 0">
+              <div class="btn btn-link text-secondary disabled text-decoration-none ms-2" v-else-if="availableRoles.length > 0">
                 {{ displayableRole(user.membership.role) }}
               </div>
 
@@ -175,7 +175,7 @@
                   {{ role.name }}
               </span>
 
-              <svg v-if="updateRoleForm.role == role.key" class="ml-1 text-success font-weight-light" width="20" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <svg v-if="updateRoleForm.role == role.key" class="ms-1 text-success font-weight-light" width="20" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             </div>
 
             <!-- Role Description -->
@@ -191,7 +191,7 @@
           Cancel
         </jet-secondary-button>
 
-        <jet-button class="ml-2" @click="updateRole" :class="{ 'text-black-50': updateRoleForm.processing }" :disabled="updateRoleForm.processing">
+        <jet-button class="ms-2" @click="updateRole" :class="{ 'text-black-50': updateRoleForm.processing }" :disabled="updateRoleForm.processing">
           <div v-show="updateRoleForm.processing" class="spinner-border spinner-border-sm" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>

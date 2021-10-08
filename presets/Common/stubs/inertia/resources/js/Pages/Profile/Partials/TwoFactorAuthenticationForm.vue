@@ -61,14 +61,14 @@
 
         <div v-else>
           <jet-confirms-password @confirmed="regenerateRecoveryCodes">
-            <jet-secondary-button class="mr-3"
+            <jet-secondary-button class="me-3"
                                   v-if="recoveryCodes.length > 0">
               Regenerate Recovery Codes
             </jet-secondary-button>
           </jet-confirms-password>
 
           <jet-confirms-password @confirmed="showRecoveryCodes">
-            <jet-secondary-button class="mr-3" v-if="recoveryCodes.length == 0">
+            <jet-secondary-button class="me-3" v-if="recoveryCodes.length == 0">
               Show Recovery Codes
             </jet-secondary-button>
           </jet-confirms-password>

@@ -16,7 +16,7 @@
       </div>
 
       <div class="d-flex justify-content-end mt-2">
-        <breeze-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+        <breeze-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
           Confirm
         </breeze-button>
       </div>

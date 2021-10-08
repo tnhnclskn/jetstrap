@@ -37,7 +37,7 @@
 
         <div class="mb-0">
           <div class="d-flex justify-content-end align-items-baseline">
-            <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted mr-3">
+            <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted me-3">
               Forgot your password?
             </Link>
 

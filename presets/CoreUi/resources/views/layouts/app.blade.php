@@ -29,15 +29,15 @@
                 {{ $sidebar ?? '' }}
             </ul>
 
-            <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
+            <button class="c-sidebar-minimizer c-class-toggler" type="button" data-bs-target="_parent" data-class="c-sidebar-minimized"></button>
         </div>
         <div class="c-wrapper">
             <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
-                <button class="c-header-toggler c-class-toggler d-lg-none mr-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
+                <button class="c-header-toggler c-class-toggler d-lg-none me-auto" type="button" data-bs-target="#sidebar" data-class="c-sidebar-show">
                     <span class="c-header-toggler-icon"></span>
                 </button>
 
-                <button class="c-header-toggler c-class-toggler ml-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
+                <button class="c-header-toggler c-class-toggler ms-3 d-md-down-none" type="button" data-bs-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
                     <span class="c-header-toggler-icon"></span>
                 </button>
 
@@ -81,7 +81,7 @@
               <div>
                   <a href="https://jetstream.laravel.com/1.x/introduction.html">Jetstream</a> © 2020 Laravel.
               </div>
-              <div class="ml-auto">Powered by&nbsp;<a href="https://coreui.io/">CoreUI</a></div>
+              <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/">CoreUI</a></div>
             </footer>
           </div>
         </div>

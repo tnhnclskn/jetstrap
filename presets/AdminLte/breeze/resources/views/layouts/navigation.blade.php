@@ -16,7 +16,7 @@
     </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ms-auto">
         <!-- Authentication Links -->
         @auth
             <x-dropdown id="navbarDropdown" class="user-menu">
