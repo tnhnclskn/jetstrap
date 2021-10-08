@@ -29,15 +29,15 @@
                 {{ $sidebar ?? '' }}
             </ul>
 
-            <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
+            <button class="c-sidebar-minimizer c-class-toggler" type="button" data-bs-target="_parent" data-class="c-sidebar-minimized"></button>
         </div>
         <div class="c-wrapper">
             <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
-                <button class="c-header-toggler c-class-toggler d-lg-none me-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
+                <button class="c-header-toggler c-class-toggler d-lg-none me-auto" type="button" data-bs-target="#sidebar" data-class="c-sidebar-show">
                     <span class="c-header-toggler-icon"></span>
                 </button>
 
-                <button class="c-header-toggler c-class-toggler ms-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
+                <button class="c-header-toggler c-class-toggler ms-3 d-md-down-none" type="button" data-bs-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
                     <span class="c-header-toggler-icon"></span>
                 </button>
 

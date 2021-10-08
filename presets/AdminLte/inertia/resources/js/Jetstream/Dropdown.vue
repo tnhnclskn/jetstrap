@@ -1,6 +1,6 @@
 <template>
   <li :class="classes">
-    <a :id="id" href="#" class="nav-link" role="button" data-toggle="dropdown" aria-expanded="false">
+    <a :id="id" href="#" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <slot name="trigger"></slot>
     </a>
 

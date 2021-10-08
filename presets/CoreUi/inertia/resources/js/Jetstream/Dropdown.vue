@@ -1,6 +1,6 @@
 <template>
   <li class="c-header-nav-item dropdown">
-    <a :id="id" class="c-header-nav-link" role="button" data-toggle="dropdown" aria-expanded="false">
+    <a :id="id" class="c-header-nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <slot name="trigger"></slot>
     </a>
 
