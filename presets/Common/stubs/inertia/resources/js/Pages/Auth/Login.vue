@@ -37,11 +37,11 @@
 
         <div class="mb-0">
           <div class="d-flex justify-content-end align-items-baseline">
-            <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted mr-3">
+            <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted me-3">
               Forgot your password?
             </Link>
 
-            <jet-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+            <jet-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
               Log in
             </jet-button>
           </div>

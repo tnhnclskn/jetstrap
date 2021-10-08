@@ -22,7 +22,7 @@
               <Link
                 v-if="canRegister"
                 :href="route('register')"
-                class="ml-4 text-muted"
+                class="ms-4 text-muted"
               >
                 Register
               </Link>
@@ -273,7 +273,7 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   viewBox="0 0 24 24"
-                  class="ml-4 text-muted"
+                  class="ms-4 text-muted"
                   style="width: 18px"
                 >
                   <path

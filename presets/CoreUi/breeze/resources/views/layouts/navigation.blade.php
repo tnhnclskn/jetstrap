@@ -6,7 +6,7 @@
     </li>
 </ul>
 
-<ul class="c-header-nav ml-auto mr-4">
+<ul class="c-header-nav ms-auto me-4">
     <!-- Authentication Links -->
     @auth
         <x-dropdown id="navbarDropdown">

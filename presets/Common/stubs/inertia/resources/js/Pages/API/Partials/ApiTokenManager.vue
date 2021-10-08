@@ -144,7 +144,7 @@
           Cancel
         </jet-secondary-button>
 
-        <jet-button class="ml-2" @click="updateApiToken" :class="{ 'text-black-50': updateApiTokenForm.processing }" :disabled="updateApiTokenForm.processing">
+        <jet-button class="ms-2" @click="updateApiToken" :class="{ 'text-black-50': updateApiTokenForm.processing }" :disabled="updateApiTokenForm.processing">
           Save
         </jet-button>
       </template>
@@ -165,7 +165,7 @@
           Cancel
         </jet-secondary-button>
 
-        <jet-danger-button class="ml-2" @click="deleteApiToken" :class="{ 'text-white-50': deleteApiTokenForm.processing }" :disabled="deleteApiTokenForm.processing">
+        <jet-danger-button class="ms-2" @click="deleteApiToken" :class="{ 'text-white-50': deleteApiTokenForm.processing }" :disabled="deleteApiTokenForm.processing">
           Delete
         </jet-danger-button>
       </template>

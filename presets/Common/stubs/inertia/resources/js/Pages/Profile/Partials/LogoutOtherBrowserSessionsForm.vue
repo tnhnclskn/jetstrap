@@ -31,7 +31,7 @@
             </svg>
           </div>
 
-          <div class="ml-2">
+          <div class="ms-2">
             <div>
               {{ session.agent.platform }} - {{ session.agent.browser }}
             </div>
@@ -79,7 +79,7 @@
             Cancel
           </jet-secondary-button>
 
-          <jet-button class="ml-2" @click="logoutOtherBrowserSessions" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+          <jet-button class="ms-2" @click="logoutOtherBrowserSessions" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
             Log out Other Browser Sessions
           </jet-button>
         </template>

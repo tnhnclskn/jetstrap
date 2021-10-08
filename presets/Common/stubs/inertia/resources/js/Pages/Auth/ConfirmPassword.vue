@@ -21,7 +21,7 @@
         </div>
 
         <div class="d-flex justify-content-end mt-2">
-          <jet-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+          <jet-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
             Confirm
           </jet-button>
         </div>

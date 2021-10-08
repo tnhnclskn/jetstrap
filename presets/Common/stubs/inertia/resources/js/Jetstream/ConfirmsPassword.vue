@@ -28,7 +28,7 @@
           Cancel
         </jet-secondary-button>
 
-        <jet-button class="ml-2" @click="confirmPassword" :class="{ 'text-black-50': form.processing }" :disabled="form.processing">
+        <jet-button class="ms-2" @click="confirmPassword" :class="{ 'text-black-50': form.processing }" :disabled="form.processing">
           {{ button }}
         </jet-button>
       </template>

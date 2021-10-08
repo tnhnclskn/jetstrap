@@ -38,11 +38,11 @@
 
       <div class="mb-0">
         <div class="d-flex justify-content-end align-items-baseline">
-          <Link :href="route('login')" class="text-muted mr-3 text-decoration-none">
+          <Link :href="route('login')" class="text-muted me-3 text-decoration-none">
             Already registered?
           </Link>
 
-          <breeze-button class="ml-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+          <breeze-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
             Register
           </breeze-button>
         </div>

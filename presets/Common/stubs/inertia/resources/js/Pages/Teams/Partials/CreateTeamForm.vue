@@ -15,7 +15,7 @@
                 <div class="d-flex mt-2">
                     <img class="rounded-circle" width="48" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name">
 
-                    <div class="ml-2">
+                    <div class="ms-2">
                         <div>{{ $page.props.user.name }}</div>
                         <div class="text-muted">{{ $page.props.user.email }}</div>
                     </div>
