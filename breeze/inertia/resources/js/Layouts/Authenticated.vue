@@ -34,7 +34,7 @@
 
               <template #content>
                 <!-- Authentication -->
-                <breeze-dropdown-link :href="route('logout')" method="post">
+                <breeze-dropdown-link :href="route('logout')" method="post" as="button">
                   Log Out
                 </breeze-dropdown-link>
               </template>
