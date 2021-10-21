@@ -34,7 +34,7 @@
 
               <template #content>
                 <!-- Authentication -->
-                <breeze-dropdown-link @click="logout" :as="'button'">
+                <breeze-dropdown-link @click="logout" as="button">
                   Log Out
                 </breeze-dropdown-link>
               </template>
